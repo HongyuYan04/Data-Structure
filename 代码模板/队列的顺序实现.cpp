@@ -5,6 +5,7 @@ typedef struct {
 } SqQueue;
 
 void InitQueue(SqQueue &Q) {
+    // initial a queue Q
     Q.rear = Q.front = 0;
 }
 
