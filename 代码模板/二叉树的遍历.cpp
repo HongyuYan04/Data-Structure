@@ -73,6 +73,11 @@ int maxDepth(struct TreeNode* root) {
 }
 
 // 二叉树的层次遍历
+typedef struct BiTNode {
+    char data;
+    struct BiTNode *lchild, *rchild;
+} BiTNode, *BiTree;
+
 typedef struct LinkNode {
     BiTNode *data;
     struct LinkNode *next;
@@ -81,11 +86,6 @@ typedef struct LinkNode {
 typedef struct {
     LinkNode *front, *rear;
 } LinkQueue;
-
-typedef struct BiTNode {
-    char data;
-    struct BiTNode *lchild, *rchild;
-} BiTNode, *BiTree;
 
 void InitQueue(LinkQueue &Q) {
     Q.front = Q.rear = (LinkNode *) malloc (sizeof(LinkNode));
