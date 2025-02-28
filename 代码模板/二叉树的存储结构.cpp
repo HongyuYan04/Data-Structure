@@ -28,3 +28,10 @@ p->data = {2};
 p->lchild = NULL;
 p->rchild = NULL;
 Root->lchild = p;
+
+
+// Bonus : 三叉链表
+typedef struct BiTNode {
+    ElemType data;
+    struct BiTNode *lchild, *rchild, *fa;
+} BiTNode, *BiTree;
