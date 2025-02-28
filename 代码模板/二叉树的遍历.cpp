@@ -60,3 +60,14 @@ int* postorderTraversal(struct TreeNode* root, int* returnSize) {
     PostOrder(root, seq, returnSize);
     return seq;
 }
+
+// 求二叉树的高度 :
+int maxDepth(struct TreeNode* root) {
+    if (root == NULL) {
+        return 0;
+    } else {
+        int L = maxDepth(root->left);
+        int R = maxDepth(root->right);
+        return L > R ? L + 1 : R + 1;       
+    }
+}
